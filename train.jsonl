@@ -1,0 +1,80 @@
+{"query": "What is the recommended maximum timeout for MySQL queries?", "sentence": "A common practice is to set the query timeout to 30 seconds for most applications.", "label": 1.0}
+{"query": "How do I configure the HikariCP connection pool size?", "sentence": "In the HikariCP configuration, set maxPoolSize=20 to allow up to 20 concurrent connections.", "label": 1.0}
+{"query": "Why am I seeing \"Lock wait timeout exceeded\" errors?", "sentence": "The error occurs when a transaction holds a lock longer than innodb_lock_wait_timeout, which defaults to 50 seconds.", "label": 1.0}
+{"query": "What indexes should I add to improve the performance of this SELECT?", "sentence": "Creating a composite index on (user_id, created_at) will speed up the query that filters by those columns.", "label": 1.0}
+{"query": "How can I detect long\u2011running queries in PostgreSQL?", "sentence": "Enable pg_stat_statements and query the view for entries with total_time > 5000 ms.", "label": 1.0}
+{"query": "Is there a way to automatically recycle idle connections?", "sentence": "Set the idleTimeout property in the pool configuration; for example, idleTimeout=300000 recycles connections after 5 minutes of inactivity.", "label": 1.0}
+{"query": "What does the EXPLAIN plan show for my slow query?", "sentence": "The plan shows a full table scan (Seq Scan) on the orders table, indicating missing indexes on order_date.", "label": 1.0}
+{"query": "Can I use prepared statements to reduce parsing overhead?", "sentence": "Prepared statements are cached by the driver, eliminating repeated parsing and planning for identical queries.", "label": 1.0}
+{"query": "How should I set the JDBC driver timeout properties?", "sentence": "Set connectTimeout=10000 and socketTimeout=30000 in the JDBC URL to limit connection and read timeouts.", "label": 1.0}
+{"query": "What is the impact of increasing the max_connections setting in PostgreSQL?", "sentence": "Raising max_connections allows more concurrent clients but consumes more shared memory, potentially reducing overall performance if set too high.", "label": 1.0}
+{"query": "Do you think the new coffee machine will boost productivity?", "sentence": "I heard the office got a fancy espresso maker last week.", "label": 0.0}
+{"query": "Can you recommend a good movie for the weekend?", "sentence": "The latest superhero film broke box\u2011office records.", "label": 0.0}
+{"query": "How are you doing today?", "sentence": "I'm doing well, thanks for asking!", "label": 0.0}
+{"query": "What's the weather like outside?", "sentence": "Looks like it's sunny with a chance of clouds later.", "label": 0.0}
+{"query": "Did you see the game last night?", "sentence": "That final goal was absolutely thrilling.", "label": 0.0}
+{"query": "Any plans for the holiday season?", "sentence": "I'm thinking of visiting my family and maybe taking a short hike.", "label": 0.0}
+{"query": "How do I reset my password?", "sentence": "Just click the 'Forgot password' link on the login page.", "label": 0.0}
+{"query": "What time is the meeting tomorrow?", "sentence": "The meeting is scheduled for 10:00\u202fAM in conference room B.", "label": 0.0}
+{"query": "Can you share the latest sales numbers?", "sentence": "Sure, the Q3 revenue hit $2.3\u202fmillion, up 12% from last quarter.", "label": 0.0}
+{"query": "Do you prefer tea or coffee?", "sentence": "I usually start my day with a strong black coffee.", "label": 0.0}
+{"query": "How do I run FastAPI with multiple async workers?", "sentence": "You can start uvicorn with the --workers flag, e.g., uvicorn app:app --host 0.0.0.0 --port 8000 --workers 4, which spawns multiple worker processes handling async requests.", "label": 1.0}
+{"query": "What is the best way to share a database connection pool across FastAPI routes?", "sentence": "Create a single async engine with SQLAlchemy's create_async_engine and inject it via Depends so each route reuses the same pool.", "label": 1.0}
+{"query": "Can I use Gunicorn with Uvicorn workers for a FastAPI microservice?", "sentence": "Yes, run gunicorn with the uvicorn.workers.UvicornWorker class, e.g., gunicorn -k uvicorn.workers.UvicornWorker -w 4 myapp:app.", "label": 1.0}
+{"query": "How should I structure Dockerfiles for a FastAPI service that uses async workers?", "sentence": "Use a multi\u2011stage build: first stage installs dependencies and copies the source, second stage uses a slim python image and runs uvicorn with the --workers flag.", "label": 1.0}
+{"query": "What environment variable controls the number of workers in a FastAPI deployment on Kubernetes?", "sentence": "Set the env var UVICORN_WORKERS in the container spec and reference it in the command line like uvicorn app:app --workers $UVICORN_WORKERS.", "label": 1.0}
+{"query": "How can I limit the concurrency of a specific endpoint in FastAPI?", "sentence": "Wrap the endpoint logic with a semaphore from asyncio, acquiring it at the start and releasing after processing to cap concurrent executions.", "label": 1.0}
+{"query": "Is it safe to store session state in a global variable when using async workers?", "sentence": "No, global mutable state is not shared safely across processes; use an external store such as Redis instead.", "label": 1.0}
+{"query": "What does the 'lifespan' event do in a FastAPI application?", "sentence": "It runs startup and shutdown code once per process, allowing you to initialise resources like DB pools before handling requests.", "label": 1.0}
+{"query": "How do I configure CORS for a FastAPI microservice behind an API gateway?", "sentence": "Add fastapi.middleware.cors.CORSMiddleware with allow_origins set to the gateway's URL and include it in the app middleware stack.", "label": 1.0}
+{"query": "Which HTTP status code should I return for a rate\u2011limited FastAPI endpoint?", "sentence": "Return 429 Too Many Requests, optionally including a Retry-After header indicating when the client may retry.", "label": 1.0}
+{"query": "Did you see the latest sprint board updates?", "sentence": "I haven't looked at them yet, but I can check later today.", "label": 0.0}
+{"query": "Thanks for the quick reply!", "sentence": "Happy to help! Let me know if you need anything else.", "label": 0.0}
+{"query": "How's the weather where you are?", "sentence": "It's sunny and warm, perfect for a walk outside.", "label": 0.0}
+{"query": "Can you remind me to review the PR tomorrow?", "sentence": "Sure, I'll send you a reminder in the morning.", "label": 0.0}
+{"query": "I love the new coffee machine in the office.", "sentence": "It definitely makes the mornings more pleasant!", "label": 0.0}
+{"query": "Did you enjoy the weekend hike?", "sentence": "It was great, the trail had amazing views.", "label": 0.0}
+{"query": "What's your favorite programming language?", "sentence": "I have a soft spot for Python because of its readability.", "label": 0.0}
+{"query": "Are we still on for the team lunch at 12?", "sentence": "Yes, see you there!", "label": 0.0}
+{"query": "Just wanted to say good job on the deployment!", "sentence": "Thanks, the team put a lot of effort into it.", "label": 0.0}
+{"query": "Do you have any plans for the holiday season?", "sentence": "I'm thinking of visiting family and maybe doing some hiking.", "label": 0.0}
+{"query": "How can I resolve a merge conflict when rebasing my feature branch onto develop?", "sentence": "When you run `git rebase develop` and encounter conflicts, you need to edit the conflicting files, stage the changes with `git add`, and then continue the rebase with `git rebase --continue`.", "label": 1.0}
+{"query": "What is the best branching strategy for a small team using Git?", "sentence": "A common approach is Git Flow, which uses separate `feature`, `release`, and `hotfix` branches alongside `develop` and `master`.", "label": 1.0}
+{"query": "Can I abort a rebase if I realize I made a mistake?", "sentence": "Yes, you can run `git rebase --abort` to return to the state before the rebase started.", "label": 1.0}
+{"query": "Why does my CI pipeline fail after merging a pull request?", "sentence": "The pipeline might be failing because the merge introduced a syntax error in a recently modified configuration file.", "label": 1.0}
+{"query": "Is there a way to automatically pick the incoming changes during a merge conflict?", "sentence": "You can use `git checkout --theirs <file>` to accept the incoming version for a specific file.", "label": 1.0}
+{"query": "How do I squash multiple commits into a single one before merging?", "sentence": "Run `git rebase -i HEAD~N`, mark the earlier commits as `squash`, then save and edit the commit message as needed.", "label": 1.0}
+{"query": "What does the `--no-ff` flag do when merging?", "sentence": "The `--no-ff` flag forces Git to create a merge commit even when a fast\u2011forward merge is possible, preserving the branch history.", "label": 1.0}
+{"query": "Can I rebase a branch that has already been pushed to a shared repository?", "sentence": "Rebasing shared branches is risky because it rewrites history; you should coordinate with teammates or use `git push --force-with-lease` if necessary.", "label": 1.0}
+{"query": "How can I view a visual representation of my branch graph?", "sentence": "Use `git log --graph --oneline --decorate` or a GUI tool like `gitk` to see the branch topology.", "label": 1.0}
+{"query": "What is the difference between `git merge` and `git rebase`?", "sentence": "`git merge` creates a new merge commit that combines histories, while `git rebase` rewrites commits onto a new base, producing a linear history.", "label": 1.0}
+{"query": "Do you think the coffee in the office is better than the one at home?", "sentence": "I personally prefer the office coffee because it\u2019s fresher.", "label": 0.0}
+{"query": "Thanks for the help earlier!", "sentence": "You\u2019re welcome! Happy to assist.", "label": 0.0}
+{"query": "By the way, did you see the game last night?", "sentence": "It was a close match, especially in the final quarter.", "label": 0.0}
+{"query": "Can you remind me what we discussed about the weekend plans?", "sentence": "We talked about hiking up the trail on Saturday and grabbing brunch afterwards.", "label": 0.0}
+{"query": "I love the new UI colors you chose for the dashboard!", "sentence": "The pastel palette was selected to reduce eye strain during long sessions.", "label": 0.0}
+{"query": "What time is the meeting tomorrow?", "sentence": "The meeting is scheduled for 10:00\u202fAM in the main conference room.", "label": 0.0}
+{"query": "Did you get a chance to try the new pizza place downtown?", "sentence": "Their margherita pizza has a crisp crust and fresh basil.", "label": 0.0}
+{"query": "How's the weather where you are?", "sentence": "It's sunny with a gentle breeze, perfect for a walk.", "label": 0.0}
+{"query": "Any thoughts on the latest movie release?", "sentence": "The cinematography was stunning, though the plot felt a bit thin.", "label": 0.0}
+{"query": "Are you attending the company picnic next month?", "sentence": "Yes, I\u2019ll be bringing a salad for the potluck.", "label": 0.0}
+{"query": "What should I do if `git status` shows a file as both modified and staged?", "sentence": "Run `git reset HEAD <file>` to unstage it, then edit or commit as needed.", "label": 1.0}
+{"query": "How can I set a memory limit for my Docker container?", "sentence": "You can use the --memory flag with docker run to set a hard memory cap, e.g., docker run --memory=500m myimage.", "label": 1.0}
+{"query": "What does the OOM killer do inside a container?", "sentence": "When a container exceeds its memory limit, the kernel OOM killer terminates processes inside the cgroup to free memory.", "label": 1.0}
+{"query": "How do I view real\u2011time memory usage of a running container?", "sentence": "Run docker stats to see CPU, memory, network, and I/O metrics for each container in real time.", "label": 1.0}
+{"query": "Can I allow a container to use swap memory?", "sentence": "Use the --memory-swap flag to set total memory+swap; setting it to -1 disables swap limits.", "label": 1.0}
+{"query": "What kernel parameter controls how aggressively the OOM killer acts?", "sentence": "The vm.overcommit_memory sysctl controls overcommit behavior, and vm.panic_on_oom can force a reboot on OOM.", "label": 1.0}
+{"query": "How do I disable OOM killing for a specific container?", "sentence": "Pass --oom-kill-disable to docker run; the container will not be killed by the OOM killer, but may become unresponsive.", "label": 1.0}
+{"query": "Is there a way to set swappiness for a Docker container?", "sentence": "Set the memory.swappiness cgroup value via docker run --memory-swappiness=10 to control swap usage.", "label": 1.0}
+{"query": "How can I specify memory limits in a docker\u2011compose file?", "sentence": "In docker\u2011compose.yml, use deploy.resources.limits.memory: 256M under the service definition (for Swarm mode).", "label": 1.0}
+{"query": "Where can I find OOM events logged for a container?", "sentence": "Check the host's kernel log with dmesg or journalctl -k; OOM messages include the container's cgroup ID.", "label": 1.0}
+{"query": "What does the --oom-score-adj flag do?", "sentence": "It adjusts the OOM killer's score for the container's processes; higher values make them more likely to be killed.", "label": 1.0}
+{"query": "Hi, can you help me?", "sentence": "Sure, what do you need assistance with?", "label": 0.0}
+{"query": "Thanks for the info!", "sentence": "You're welcome! Glad it helped.", "label": 0.0}
+{"query": "Do you prefer tea or coffee?", "sentence": "I don't have preferences, but many developers enjoy coffee while coding.", "label": 0.0}
+{"query": "I tried the command but got an error.", "sentence": "Could you share the exact error message so I can help troubleshoot?", "label": 0.0}
+{"query": "Sorry for the late reply.", "sentence": "No worries, take your time.", "label": 0.0}
+{"query": "What are your weekend plans?", "sentence": "I don't have plans, but I hope you have a great weekend!", "label": 0.0}
+{"query": "Just checking in, any updates?", "sentence": "Let me know if you need further clarification on the memory limits.", "label": 0.0}
+{"query": "Good luck with your project!", "sentence": "Thank you! Let me know if you run into any issues.", "label": 0.0}
+{"query": "By the way, what's your favorite programming language?", "sentence": "I don't have personal favorites, but many enjoy Python for its simplicity.", "label": 0.0}

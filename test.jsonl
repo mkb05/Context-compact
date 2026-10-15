@@ -1,0 +1,21 @@
+{"query": "Let me know if you need anything else.", "sentence": "Will do, thanks!", "label": 0.0}
+{"query": "How do I export my PyTorch model to ONNX?", "sentence": "You can use torch.onnx.export(model, dummy_input, \"model.onnx\", opset_version=12).", "label": 1.0}
+{"query": "What is the best way to quantize an ONNX model for edge devices?", "sentence": "Apply static quantization with onnxruntime.quantization.quantize_static and provide a calibration dataset.", "label": 1.0}
+{"query": "Can you show me a code snippet for tokenizing text with Hugging Face?", "sentence": "from transformers import AutoTokenizer\ntokenizer = AutoTokenizer.from_pretrained(\"bert-base-uncased\")\ninputs = tokenizer(\"Hello world\", return_tensors=\"pt\")", "label": 1.0}
+{"query": "How should I structure a Scikit\u2011Learn pipeline that includes scaling and a classifier?", "sentence": "pipeline = Pipeline([('scaler', StandardScaler()), ('clf', RandomForestClassifier())])", "label": 1.0}
+{"query": "What are the required steps to convert a TensorFlow SavedModel to ONNX?", "sentence": "Use the tf2onnx.convert.from_saved_model command-line tool or the Python API with tf2onnx.convert.from_keras.", "label": 1.0}
+{"query": "How can I enable per\u2011channel quantization for weights in ONNX Runtime?", "sentence": "Set per_channel=True in the QuantizationParameters when calling quantize_static.", "label": 1.0}
+{"query": "What configuration flag disables dropout during inference in an ONNX model?", "sentence": "Set the environment variable ONNX_DISABLE_DROPOUT=1 before loading the model.", "label": 1.0}
+{"query": "How do I add a custom preprocessing step to a PyTorch Lightning data module?", "sentence": "Override the preprocess method in your LightningDataModule and apply the transform before returning the batch.", "label": 1.0}
+{"query": "Which ONNX opset version supports the new GELU activation?", "sentence": "GELU is supported starting from opset version 13.", "label": 1.0}
+{"query": "What is the recommended batch size for calibrating a quantized model?", "sentence": "A batch size of 32\u201364 samples usually provides a good trade\u2011off between speed and calibration accuracy.", "label": 1.0}
+{"query": "Hey, how's your day going?", "sentence": "I'm doing great, thanks for asking!", "label": 0.0}
+{"query": "Can you recommend a good coffee shop nearby?", "sentence": "Sure, the downtown cafe on Main Street has excellent espresso.", "label": 0.0}
+{"query": "What's your favorite movie?", "sentence": "I really enjoy classic sci\u2011fi films like Blade Runner.", "label": 0.0}
+{"query": "Thanks for the help earlier!", "sentence": "No problem, happy to assist!", "label": 0.0}
+{"query": "Did you see the game last night?", "sentence": "It was a close match, especially in the final quarter.", "label": 0.0}
+{"query": "I'm thinking of taking a vacation soon, any suggestions?", "sentence": "A beach destination can be relaxing, especially if you like snorkeling.", "label": 0.0}
+{"query": "Could you tell me a joke?", "sentence": "Why did the neural network go to school? To improve its layers!", "label": 0.0}
+{"query": "How's the weather where you are?", "sentence": "It's sunny with a light breeze today.", "label": 0.0}
+{"query": "Do you prefer cats or dogs?", "sentence": "Both are wonderful companions, each with their own charm.", "label": 0.0}
+{"query": "What do you think about the latest smartphone release?", "sentence": "It has impressive specs, but the battery life could be better.", "label": 0.0}
