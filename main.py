@@ -1,11 +1,26 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from engine import VerbatimCompactorEngine
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Context Compaction Service", version="1.0.0")
 
 # Loaded once on startup (~65MB RAM)
 compactor = VerbatimCompactorEngine(model_dir="./onnx_compactor")
+
+origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "*", 
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"], 
+    allow_headers=["*"],
+)
 
 class CompactionRequest(BaseModel):
     raw_context: str = Field(..., description="Full multi-turn history to prune.")
